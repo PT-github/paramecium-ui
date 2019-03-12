@@ -30,15 +30,16 @@ export default {
       toogleActive: false
     };
   },
+  beforeDestroy () {
+    window.removeEventListener('click', this.handlerClick)
+  },
+  destroyed () {
+    console.log('2222222222')
+    // window.removeEventListener('click', this.handlerClick)
+  },
   mounted () {
     let _this = this
-    window.addEventListener('click', function (e) {
-      if (_this.$refs.select.contains(e.target)) {
-        _this.stopEvent(e)
-      } else {
-        _this.toogleActive = false
-      }
-    })
+    window.addEventListener('click', this.handlerClick)
   },
   computed: {
     optionFormatter () {
@@ -53,6 +54,16 @@ export default {
     this.newValue = this.value
   },
   methods: {
+    handlerClick (e) {
+      console.log('111111111111')
+      if (this.$refs.select) {
+        if (this.$refs.select.contains(e.target)) {
+          this.stopEvent(e)
+        } else {
+          this.toogleActive = false
+        }
+      }
+    },
     stopEvent (e) {
       window.event? window.event.cancelBubble = true : e.stopPropagation();
     },
