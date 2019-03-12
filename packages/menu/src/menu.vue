@@ -107,6 +107,7 @@ export default {
         padding: 0 40px;
         font-size: 12px;
         display: block;
+        text-decoration: none;
         &:active, &:hover, &:visited {
           color: inherit;
         }
