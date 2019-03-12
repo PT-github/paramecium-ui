@@ -15,6 +15,11 @@ export default new Router({
           path: '/select',
           name: 'select',
           component: () => import(/* webpackChunkName: "Select" */'../components/select/index.vue')
+        },
+        {
+          path: '/menu',
+          name: 'menu',
+          component: () => import(/* webpackChunkName: "menu" */'../components/menu/index.vue')
         }
       ]
     }

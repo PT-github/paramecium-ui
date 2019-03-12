@@ -2,6 +2,7 @@
   <div class="layout">
     <div class="left">
       <router-link :to="'/select'" tag="a" :class="{active: $route.path === '/select'}">select组件</router-link>
+      <router-link :to="'/menu'" tag="a" :class="{active: $route.path === '/menu'}">menu组件</router-link>
     </div>
     <div class="right">
       <router-view></router-view>
@@ -12,7 +13,11 @@
 <script>
 export default {
   name: 'Layout',
-  
+  data () {
+    return {
+      
+    }
+  }
 }
 </script>
 <style lang="less" scoped>

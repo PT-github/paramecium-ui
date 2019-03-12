@@ -1,9 +1,12 @@
-// 导入颜色选择器组件
+import './them/style/style.css'
+// 导入组件
 import select from './select'
+// import menu from './menu'
 
 // 存储组件列表
 const components = [
-  select
+  select,
+  // menu
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
