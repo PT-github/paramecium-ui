@@ -34,7 +34,7 @@ export default {
     let _this = this
     window.addEventListener('click', function (e) {
       if (_this.$refs.select.contains(e.target)) {
-        _this.stopEvent()
+        _this.stopEvent(e)
       } else {
         _this.toogleActive = false
       }
@@ -53,7 +53,7 @@ export default {
     this.newValue = this.value
   },
   methods: {
-    stopEvent () {
+    stopEvent (e) {
       window.event? window.event.cancelBubble = true : e.stopPropagation();
     },
     selectOption (value) {
