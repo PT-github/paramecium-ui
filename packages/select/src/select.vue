@@ -102,6 +102,7 @@ export default {
     background-color: #fff;
     box-shadow: 1px 1px 1px 1px #ccc;
     border-radius: 4px;
+    z-index: 1;
     .pmc-select-option {
       width: 100%;
       height: 34px;

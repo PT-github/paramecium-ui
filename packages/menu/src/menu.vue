@@ -1,7 +1,7 @@
 <template>
   <div class="pmc-menu">
     <div class="pmc-menu-level_1" v-for="(item, index) in menuData" :key="'pmc-menu_' + index">
-      <div class="pmc-menu-level_1-box" @click.stop="handlerClick(index, item)">
+      <div class="pmc-menu-level_1-box" @click="handlerClick(index, item)">
         <span class="pcm-menu-level_1-icon" v-if="item.icon">
           <i class="iconfont" :class="item.icon"></i>
         </span>
