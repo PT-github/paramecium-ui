@@ -13,7 +13,7 @@
           ></i>
         </span>
         <span class="pmc-menu-level_1-arrow" v-else>
-          <i class="iconfont iconjiantouxia trans-z"></i>
+          <i class="iconfont iconjiantouxia trans-x"></i>
         </span>
       </div>
       <div
@@ -119,8 +119,9 @@ export default {
         font-size: 12px;
         color: #c0c4cc;
       }
-      .trans-z {
-        transform: rotateZ(270deg)
+      .trans-x {
+        display: inline-block;
+        transform: rotate(270deg)
       }
     }
     .pmc-menu-level_1-title {
