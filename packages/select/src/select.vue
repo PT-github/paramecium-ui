@@ -33,12 +33,7 @@ export default {
   beforeDestroy () {
     window.removeEventListener('click', this.handlerClick)
   },
-  destroyed () {
-    console.log('2222222222')
-    // window.removeEventListener('click', this.handlerClick)
-  },
   mounted () {
-    let _this = this
     window.addEventListener('click', this.handlerClick)
   },
   computed: {
@@ -55,7 +50,6 @@ export default {
   },
   methods: {
     handlerClick (e) {
-      console.log('111111111111')
       if (this.$refs.select) {
         if (this.$refs.select.contains(e.target)) {
           this.stopEvent(e)
